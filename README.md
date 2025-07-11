@@ -1,3 +1,3 @@
-# JS for non JS devs
+# Git best practices for collaborative development
 
-JavaScript presentation for OpenText Romania.
+git presentation for OpenText Romania.
