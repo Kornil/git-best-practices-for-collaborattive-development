@@ -25,6 +25,20 @@
       .error {
         color: #d1301d;
       }
+
+      .box-wrapper {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+      }
+      .box {
+        flex: 1;
+        text-align: center;
+        background: #333;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 0 10px;
+      }
     </style>
   </head>
 
@@ -238,6 +252,33 @@
               <li>Author name and email.</li>
               <li>Date.</li>
             </ul>
+          </section>
+        </section>
+
+        <!-- Interlude #1: The 3 states -->
+        <section>
+          <section><h2>Interlude #1: The 3 states</h2></section>
+          <section>
+            <div class="box-wrapper">
+              <div class="box">
+                <h4>Working directory</h4>
+                <small>Actual files on your machine.</small>
+                <br /><br />
+                <small><em>unversioned changes</em></small>
+              </div>
+              <div class="box">
+                <h4>Staging area</h4>
+                <small>Temporary area to build snapshots for commits.</small>
+                <br /><br />
+                <small><em>changes ready to commit</em></small>
+              </div>
+              <div class="box">
+                <h4>Git Repository</h4>
+                <small>Snapshots of files held in git as commits.</small>
+                <br /><br />
+                <small><em>committed snapshots</em></small>
+              </div>
+            </div>
           </section>
         </section>
 
