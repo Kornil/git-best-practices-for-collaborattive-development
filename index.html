@@ -295,6 +295,33 @@
           </section>
         </section>
 
+        <!-- Interlude #2: Stash -->
+        <section>
+          <section><h2>Interlude #2: Stash</h2></section>
+          <section>
+            <p>
+              The stash can be used to
+              <span class="hl">store uncommitted changes</span> and clean up the
+              working directory.
+            </p>
+            <p>
+              This allows to quickly
+              <span class="hl">switch between different branches</span> without
+              having to commit WIP code.
+            </p>
+            <pre><code data-trim  class="language-bash">
+              # Store uncommitted changes
+              $ git stash save "new route wip"
+
+              $ git stash list
+              > stash@{0}: On master: new route wip
+
+              # Retrieve previously stored changes
+              $ git stash pop stash@{0}
+            </code></pre>
+          </section>
+        </section>
+
     </div>
 
     <script src="dist/reveal.js"></script>
