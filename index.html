@@ -150,6 +150,41 @@
           </section>
         </section>
 
+        <!-- Remote -->
+        <section>
+          <section><h2>Remote</h2></section>
+          <section>
+            The remote is the version of the repository
+            <span class="hl">hosted on a server</span>
+            (usually GitHub or GitLab)
+          </section>
+          <section>
+            <span class="hl">origin</span> is usually the default remote where
+            fetch and push operations direct.
+
+            <pre><code data-trim class="language-shell">
+              $ git remove -v
+
+              > origin  git@github.com:Kornil/my-repo.git (fetch)
+              > origin  git@github.com:Kornil/my-repo.git (push)
+            </code></pre>
+          </section>
+          <section>
+            <p>
+              Git stores a <span class="hl">local copy</span> of remote
+              branches.
+            </p>
+            <p>Updating them does not impact your working branches.</p>
+
+            <pre><code data-trim class="language-bash">
+              $ git fetch
+
+              # origin/master is updated
+              # master is untouched
+            </code></pre>
+          </section>
+        </section>
+
     </div>
 
     <script src="dist/reveal.js"></script>
