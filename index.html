@@ -447,61 +447,94 @@
           <section>
             <h2>History is sacred</h2>
           </section>
+          <section>
+            <q
+              cite="https://www.mail-archive.com/dri-devel@lists.sourceforge.net/msg39091.html"
+            >
+              You must never EVER destroy other peoples history. Once you've
+              published your history in some public site, other people may be
+              using it, and so now it's clearly not your private history any
+              more.
+            </q>
+            <br />
+            <p>— Linus Torvalds</p>
+          </section>
+
           <section data-auto-animate>
+            <p>
+              The key distinction is <span class="hl">Local</span> vs.
+              <span class="hl">Shared</span> history:
+            </p>
+          </section>
+          <section data-auto-animate>
+            <p>
+              The key distinction is <span class="hl">Local</span> vs.
+              <span class="hl">Shared</span> history:
+            </p>
+            <ul>
+              <li>
+                You <span class="hl">can</span> modify history that is only on
+                your machine in a private branch.
+              </li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <p>
+              The key distinction is <span class="hl">Local</span> vs.
+              <span class="hl">Shared</span> history:
+            </p>
+            <ul>
+              <li>
+                You <span class="hl">can</span> modify history that is only on
+                your machine in a private branch.
+              </li>
+              <li>
+                You <span class="error">should not</span> modify history that
+                has been already published, even if it's your own branch.
+              </li>
+            </ul>
+          </section>
+          <section>
             <p>
               Git history, especially once it's shared, should be treated as a
               <span class="hl">public record</span>.
             </p>
           </section>
-          <section>
-            <q cite="https://www.mail-archive.com/dri-devel@lists.sourceforge.net/msg39091.html">
-              You must never EVER destroy other peoples history.
-              Once you've published your history in some public site, other people may be using it, and so now it's clearly not your private history any more.
-            </q>
-            <br>
-            <p>— Linus Torvalds</p>
-          </section>
 
           <section data-auto-animate>
-            <p>The key distinction is <span class="hl">Local</span> vs. <span class="hl">Shared</span> history:</p>
+            <p>The consequences of not preserving history:</p>
           </section>
           <section data-auto-animate>
-            <p>The key distinction is <span class="hl">Local</span> vs. <span class="hl">Shared</span> history:</p>
+            <p>The consequences of not preserving history:</p>
             <ul>
-              <li>You <span class="hl">can</span> modify history that is only on your machine in a private branch.</li>
+              <li>
+                Breaks team collaboration.
+              </li>
             </ul>
           </section>
           <section data-auto-animate>
-            <p>The key distinction is <span class="hl">Local</span> vs. <span class="hl">Shared</span> history:</p>
+            <p>The consequences of not preserving history:</p>
             <ul>
-              <li>You <span class="hl">can</span> modify history that is only on your machine in a private branch.</li>
-              <li>You <span class="error">should not</span> modify history that has been already published, even if it's your own branch.</li>
-            </ul>
-          </section>
-
-          <!-- TODO fix this part, passive language is eh -->
-          <section data-auto-animate>
-            <p>Why keeping history matters:</p>
-          </section>
-          <section data-auto-animate>
-            <p>Why keeping history matters:</p>
-            <ul>
-              <li><span class="hl">Breaks collaboration</span>: Other developers' local repositories will diverge.</li>
+              <li>
+                Breaks team collaboration.
+              </li>
+              <li>
+                Loss of auditability.
+              </li>
             </ul>
           </section>
           <section data-auto-animate>
-            <p>Why keeping history matters:</p>
+            <p>The consequences of not preserving history:</p>
             <ul>
-              <li><span class="hl">Breaks collaboration</span>: Other developers' local repositories will diverge.</li>
-              <li><span class="hl">Loss of auditability</span>: Changes become difficult to track, verify, or revert safely.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <p>Why keeping history matters:</p>
-            <ul>
-              <li><span class="hl">Breaks collaboration</span>: Other developers' local repositories will diverge.</li>
-              <li><span class="hl">Loss of auditability</span>: Changes become difficult to track, verify, or revert safely.</li>
-              <li>Avoid <span class="hl">confusion</span> and <span class="hl">frustration</span> for the team.</li>
+              <li>
+                Breaks team collaboration.
+              </li>
+              <li>
+                Loss of auditability.
+              </li>
+              <li>
+                Breaks trust and wastes time.
+              </li>
             </ul>
           </section>
         </section>
