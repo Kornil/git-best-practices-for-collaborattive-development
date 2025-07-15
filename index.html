@@ -539,9 +539,76 @@
           </section>
         </section>
 
-        <!-- Interlude #3: Altering history -->
+        <!-- How to safely alter history -->
+        <section>
+          <section><h2>How to safely alter history</h2></section>
+          <section>While we don't want to alter history, there are <span class="hl">safe ways to delete commits</span> before or after we publish them.</section>
+          <section>
+            <h3>git revert</h3>
+            <p>The <span class="hl">easiest</span> and <span class="hl">safest</span> way to delete a commit.</p>
+            <p>It will generate a new commit opposite of the target commit, removing all its changes and recording it in git's history.</p>
+            <pre><code data-trim class="language-bash">
+              $ git revert commit_hash_to_delete
+
+              $ git log -2
+
+              commit new_commit_hash
+                author: me
+                date: now
+                  revert "bad commit"
+
+              commit commit_hash_to_delete
+                author: me
+                date: now
+                  bad commit
+            </code></pre>
+          </section>
+          <section>
+            <h3>git reset</h3>
+            <p>This should be <span class="hl">only used on private branches</span>, it will modify history.</p>
+            <p>In this example only the last commit is modified but HEAD can be moved to affect more commits.</p>
+            <pre><code data-trim class="language-bash">
+              # last commit is gone, its content is now in the staging area
+              $ git reset --soft HEAD~
+
+              # last commit is gone, its content is now in the working area
+              $ git reset HEAD~
+
+              # last commit is gone, its content is gone
+              $ git reset --hard HEAD~
+            </code></pre>
+          </section>
+          <section>
+            <h3>git rebase</h3>
+            <p>This is a more "complete" command compared to reset, should be <span class="hl">only used on private branches</span>, it will modify history.</p>
+
+            <pre><code data-trim class="language-bash">
+              # will target the last 4 commits
+              $ git rebase -i HEAD~4
+            
+              # will open a rebase editor
+              pick 1234 Add readme.md
+              pick 2345 Fix typo
+              pick 3456 Fix another typo
+              pick 4567 Add deploy script
+            </code></pre>
+          </section>
          <section>
-          <section><h2>Altering history</h2></section>
+            <ul>
+              While other options are available, these are the most common ones:
+              <li><span class="hl">pick</span> will keep a commit as is.</li>
+              <li><span class="hl">fixup</span> will merge a commit to the previous one.</li>
+              <li><span class="hl">drop</span> will delete a commit.</li>
+              <li><span class="hl">reword</span> will rename a commit.</li>
+            </ul>
+            <pre><code data-trim class="language-bash">
+              # rebase editor
+              pick 1234 Add readme.md
+              fixup 2345 Fix typo
+              drop 3456 Fix another typo
+              reword 4567 Add deploy script
+            </code></pre>
+          </section>
          </section>
 
         <section>
