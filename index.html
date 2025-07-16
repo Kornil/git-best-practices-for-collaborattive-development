@@ -651,23 +651,28 @@
               pick 1234 Add readme.md
               pick 2345 Fix typo
               pick 3456 Fix another typo
-              pick 4567 Add deploy script
+              pick 4567 adsaks
+              pick 5678 Add deploy script
+              pick 6789 Add second deploy script
             </code></pre>
           </section>
           <section>
             <ul>
-              While other options are available, these are the most common ones:
+              Most common commands:
               <li><span class="hl">pick</span> will keep a commit as is.</li>
               <li><span class="hl">fixup</span> will merge a commit to the previous one.</li>
               <li><span class="hl">drop</span> will delete a commit.</li>
               <li><span class="hl">reword</span> will rename a commit.</li>
+              <li><span class="hl">squash</span> will merge a commit to the previous one and rename it.</li>
             </ul>
             <pre><code data-trim class="language-bash">
               # rebase editor
               pick 1234 Add readme.md
               fixup 2345 Fix typo
               drop 3456 Fix another typo
-              reword 4567 Add deploy script
+              rename 4567 adsaks
+              pick 5678 Add deploy script
+              squash 6789 Add second deploy script
             </code></pre>
           </section>
         </section>
