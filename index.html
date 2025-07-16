@@ -40,6 +40,89 @@
         margin: 0 10px;
       }
     </style>
+
+    <!-- Git Branch Diagram Styles -->
+    <style>
+      .git-diagram {
+        position: relative;
+        font-family: monospace;
+        color: #fff;
+        margin-top: 40px;
+        height: 150px; /* Give it space */
+      }
+      .git-diagram .branch {
+        display: flex;
+        align-items: center;
+        position: absolute;
+      }
+      .git-diagram .commit {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.5em;
+        position: relative;
+        background: #222;
+        z-index: 2;
+      }
+      /* Connecting line between commits */
+      .git-diagram .commit::after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 50px; /* Space between commits */
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+      .git-diagram .commit:last-child::after {
+        display: none; /* No line after the last commit */
+      }
+
+      /* Main branch styling */
+      .main-branch {
+        top: 50px;
+        left: 50px;
+      }
+      .main-branch .commit {
+        border: 3px solid #1d64d1; /* .hl color */
+      }
+      .main-branch .commit::after {
+        background: #1d64d1;
+      }
+      .main-branch-label {
+        position: absolute;
+        left: -60px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #1d64d1;
+        font-weight: bold;
+      }
+
+      /* Feature branch styling */
+      .feature-branch {
+        top: 110px;
+        /* Start it after the 2nd main commit */
+        left: calc(50px + 40px + 50px + 20px);
+      }
+      .feature-branch .commit {
+        border: 3px solid #d18a1d; /* .hl2 color */
+      }
+      .feature-branch .commit::after {
+        background: #d18a1d;
+      }
+      .feature-branch-label {
+        position: absolute;
+        left: -120px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #d18a1d;
+        font-weight: bold;
+      }
+    </style>
   </head>
 
   <body>
@@ -303,10 +386,23 @@
             <h2>Branches</h2>
           </section>
           <section>
-            A branch is a pointer to a specific commit.<br /><br />
-            It creates an
-            <span class="hl">independent line of development</span> that can be
-            later merged back into the main project.
+            <p>A branch is a movable <span class="hl">pointer</span> to a specific commit.</p>
+            <p>It creates an <span class="hl">independent line of development</span>.</p>
+            <div class="git-diagram">
+              <!-- Main Branch -->
+              <div class="branch main-branch">
+                <div class="main-branch-label">main</div>
+                <div class="commit">c1</div>
+                <div class="commit">c2</div>
+                <div class="commit">c3</div>
+              </div>
+              <!-- Feature Branch -->
+              <div class="branch feature-branch">
+                <div class="feature-branch-label">feature/new-ui</div>
+                <div class="commit">c4</div>
+                <div class="commit">c5</div>
+              </div>
+            </div>
           </section>
         </section>
 
