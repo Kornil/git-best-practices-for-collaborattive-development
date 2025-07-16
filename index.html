@@ -48,13 +48,20 @@
         font-family: monospace;
         color: #fff;
         margin-top: 40px;
-        height: 150px; /* Give it space */
       }
+
+      .git-diagram .branch-label {
+        position: absolute;
+      }
+
       .git-diagram .branch {
         display: flex;
         align-items: center;
         position: absolute;
+
+        gap: 40px;
       }
+
       .git-diagram .commit {
         width: 40px;
         height: 40px;
@@ -63,64 +70,69 @@
         align-items: center;
         justify-content: center;
         font-size: 0.5em;
-        position: relative;
         background: #222;
         z-index: 2;
+        flex-shrink: 0;
+        position: relative;
       }
-      /* Connecting line between commits */
+
       .git-diagram .commit::after {
         content: '';
         position: absolute;
         height: 3px;
-        width: 50px; /* Space between commits */
+        width: 50px;
         top: 50%;
         left: 100%;
         transform: translateY(-50%);
-        z-index: 1;
-      }
-      .git-diagram .commit:last-child::after {
-        display: none; /* No line after the last commit */
+        background: currentColor;
+        display: block;
       }
 
-      /* Main branch styling */
+      .git-diagram .commit:last-child::after {
+        display: none;
+      }
+
       .main-branch {
         top: 50px;
-        left: 50px;
+        left: 320px;
       }
       .main-branch .commit {
-        border: 3px solid #1d64d1; /* .hl color */
+        border: 3px solid #1d64d1;
       }
+      
       .main-branch .commit::after {
         background: #1d64d1;
       }
       .main-branch-label {
-        position: absolute;
-        left: -60px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 50px;
         color: #1d64d1;
-        font-weight: bold;
       }
 
-      /* Feature branch styling */
       .feature-branch {
-        top: 110px;
-        /* Start it after the 2nd main commit */
-        left: calc(50px + 40px + 50px + 20px);
+        top: 110px; 
+        left: 450px;
       }
       .feature-branch .commit {
-        border: 3px solid #d18a1d; /* .hl2 color */
+        border: 3px solid #d18a1d;
       }
       .feature-branch .commit::after {
         background: #d18a1d;
       }
       .feature-branch-label {
-        position: absolute;
-        left: -120px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 110px;
         color: #d18a1d;
-        font-weight: bold;
+      }
+
+      .git-fork-line {
+        position: absolute;
+        height: 3px;
+        background: #d18a1d; 
+
+        left: 430px;
+        top: 70px;
+        width: 72.11px;
+        transform-origin: 0 0;
+        transform: rotate(56.31deg);
       }
     </style>
   </head>
@@ -389,20 +401,25 @@
             <p>A branch is a movable <span class="hl">pointer</span> to a specific commit.</p>
             <p>It creates an <span class="hl">independent line of development</span>.</p>
             <div class="git-diagram">
-              <!-- Main Branch -->
-              <div class="branch main-branch">
-                <div class="main-branch-label">main</div>
-                <div class="commit">c1</div>
-                <div class="commit">c2</div>
-                <div class="commit">c3</div>
-              </div>
-              <!-- Feature Branch -->
-              <div class="branch feature-branch">
-                <div class="feature-branch-label">feature/new-ui</div>
-                <div class="commit">c4</div>
-                <div class="commit">c5</div>
-              </div>
+            <div class="branch-label main-branch-label">main</div>
+            <div class="branch-label feature-branch-label">feature/new-ui</div>
+
+            <div class="branch main-branch">
+              <div class="commit">c1</div>
+              <div class="commit">c2</div>
+              <div class="commit">c3</div>
+              <div class="commit">c4</div>
+              <div class="commit">c5</div>
             </div>
+
+            <div class="branch feature-branch">
+              <div class="commit">d1</div>
+              <div class="commit">d2</div>
+              <div class="commit">d3</div>
+            </div>
+
+            <div class="git-fork-line"></div>
+          </div>
           </section>
         </section>
 
