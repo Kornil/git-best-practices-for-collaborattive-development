@@ -15,6 +15,8 @@
 
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+
+    <!-- custom styles -->
     <style>
       .hl2 {
         color: #d18a1d;
@@ -124,16 +126,39 @@
         color: #d18a1d;
       }
 
+      .deploy-branch {
+        top: -10px; 
+        left: 320px;
+      }
+      .deploy-branch .commit {
+        border: 3px solid #1dd18a;
+      }
+      .deploy-branch .commit::after {
+        background: #1dd18a;
+      }
+      .deploy-branch-label {
+        top: -10px;
+        color: #1dd18a;
+      }
+
+      .git-diagram .branch.deploy-branch {
+        gap: 125px;
+      }
+
+      .git-diagram .deploy-branch .commit::after {
+        width: 130px;
+      }
+
       .git-fork-line {
         position: absolute;
         height: 3px;
         background: #d18a1d; 
 
-        left: 430px;
+        left: 420px;
         top: 70px;
-        width: 72.11px;
+        width: 70px;
         transform-origin: 0 0;
-        transform: rotate(56.31deg);
+        transform: rotate(45deg);
       }
     </style>
   </head>
