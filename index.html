@@ -160,6 +160,18 @@
         transform-origin: 0 0;
         transform: rotate(45deg);
       }
+
+      .git-fork-line-close {
+        position: absolute;
+        height: 3px;
+        background: #d18a1d; 
+
+        right: 302px;
+        top: 140px;
+        width: 70px;
+        transform-origin: 0 0;
+        transform: rotate(-48deg);
+      }
     </style>
   </head>
 
@@ -512,40 +524,145 @@
           </section>
         </section>
 
-        <!-- HEAD -->
+        <!-- Branching strategies -->
         <section>
+          <section><h2>Branching strategies</h2></section>
           <section>
-            <h2>HEAD</h2>
+            <p>There are <span class="hl">two main strategies</span> when working with git, each one has advantages and disadvantages.</p>
+          </section>
+
+          <!-- Thunk -->
+          <section data-auto-animate>
+            <h3>Trunk based development</h3>
           </section>
           <section data-auto-animate>
-            <p>
-              HEAD is a special pointer indicating the
-              <span class="hl">current commit</span> where you are.
-            </p>
+            <h3>Trunk based development</h3>
+            <ul>
+              <li>Single main branch.</li>
+            </ul>
           </section>
           <section data-auto-animate>
-            <p>
-              HEAD is a special pointer indicating the
-              <span class="hl">current commit</span> where you are.
-            </p>
-            <p>
-              By default, HEAD always points at the
-              <span class="hl">latest commit</span> of the current branch.
-            </p>
+            <h3>Trunk based development</h3>
+            <ul>
+              <li>Single main branch.</li>
+              <li>Short-lived branches.</li>
+            </ul>
           </section>
           <section data-auto-animate>
-            <p>
-              HEAD is a special pointer indicating the
-              <span class="hl">current commit</span> where you are.
-            </p>
-            <p>
-              By default, HEAD always points at the
-              <span class="hl">latest commit</span> of the current branch.
-            </p>
-            <p>
-              It can be manually <span class="hl">detached</span> to point at
-              any commit.
-            </p>
+            <h3>Trunk based development</h3>
+            <ul>
+              <li>Single main branch.</li>
+              <li>Short-lived branches.</li>
+              <li>Small, frequent commits.</li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>Trunk based development</h3>
+            <ul>
+              <li>Single main branch.</li>
+              <li>Short-lived branches.</li>
+              <li>Small, frequent commits.</li>
+              <li>Feature flags.</li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>Trunk based development</h3>
+            <ul>
+              <li>Single main branch.</li>
+              <li>Short-lived branches.</li>
+              <li>Small, frequent commits.</li>
+              <li>Feature flags.</li>
+            </ul>
+            <div class="git-diagram">
+              <div class="branch-label main-branch-label">trunk</div>
+              <div class="branch-label feature-branch-label">feature/new-ui</div>
+  
+              <div class="branch main-branch">
+                <div class="commit">m1</div>
+                <div class="commit">m2</div>
+                <div class="commit">m3</div>
+                <div class="commit">m4</div>
+                <div class="commit">m5</div>
+              </div>
+  
+              <div class="branch feature-branch">
+                <div class="commit">c1</div>
+                <div class="commit">c2</div>
+              </div>
+  
+              <div class="git-fork-line"></div>
+              <div class="git-fork-line-close"></div>
+            </div>
+          </section>
+
+          <!-- Gitflow -->
+          <section data-auto-animate>
+            <h3>Gitflow</h3>
+          </section>
+          <section data-auto-animate>
+            <h3>Gitflow</h3>
+            <ul>
+              <li>Multiple primary branches.</li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>Gitflow</h3>
+            <ul>
+              <li>Multiple primary branches.</li>
+              <li>Longer feature branches.</li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>Gitflow</h3>
+            <ul>
+              <li>Multiple primary branches.</li>
+              <li>Longer feature branches.</li>
+              <li>Structured releases.</li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>Gitflow</h3>
+            <ul>
+              <li>Multiple primary branches.</li>
+              <li>Longer feature branches.</li>
+              <li>Structured releases.</li>
+              <li>Easy versioning.</li>
+            </ul>
+          </section>
+          <section data-auto-animate>
+            <h3>Gitflow</h3>
+            <ul>
+              <li>Multiple primary branches.</li>
+              <li>Longer feature branches.</li>
+              <li>Structured releases.</li>
+              <li>Easy versioning.</li>
+            </ul>
+            <div class="git-diagram">
+              <div class="branch-label deploy-branch-label">deploy</div>
+              <div class="branch-label main-branch-label">master</div>
+              <div class="branch-label feature-branch-label">development</div>
+
+              <div class="branch deploy-branch">
+                <div class="commit">d1</div>
+                <div class="commit">d2</div>
+                <div class="commit">d3</div>
+              </div>
+
+              <div class="branch main-branch">
+                <div class="commit">m1</div>
+                <div class="commit">m2</div>
+                <div class="commit">m3</div>
+                <div class="commit">m4</div>
+                <div class="commit">m5</div>
+              </div>
+  
+              <div class="branch feature-branch">
+                <div class="commit">d1</div>
+                <div class="commit">d2</div>
+              </div>
+  
+              <div class="git-fork-line-close"></div>
+            </div>
           </section>
         </section>
 
