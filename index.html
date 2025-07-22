@@ -142,11 +142,11 @@
       }
 
       .git-diagram .branch.deploy-branch {
-        gap: 125px;
+        gap: 260px;
       }
 
       .git-diagram .deploy-branch .commit::after {
-        width: 130px;
+        width: 280px;
       }
 
       .git-fork-line {
@@ -172,6 +172,20 @@
         transform-origin: 0 0;
         transform: rotate(-48deg);
       }
+
+      .git-fork-line-deploy {
+        position: absolute;
+        height: 3px;
+        background: #1d64d1; 
+
+        right: 255px;
+        top: 75px;
+        width: 70px;
+        transform-origin: 0 0;
+        transform: rotate(-48deg);
+      }
+
+
     </style>
   </head>
 
@@ -643,9 +657,8 @@
               <div class="branch-label feature-branch-label">development</div>
 
               <div class="branch deploy-branch">
-                <div class="commit">d1</div>
-                <div class="commit">d2</div>
-                <div class="commit">d3</div>
+                <div class="commit">v1</div>
+                <div class="commit">v2</div>
               </div>
 
               <div class="branch main-branch">
@@ -653,7 +666,6 @@
                 <div class="commit">m2</div>
                 <div class="commit">m3</div>
                 <div class="commit">m4</div>
-                <div class="commit">m5</div>
               </div>
   
               <div class="branch feature-branch">
@@ -663,6 +675,7 @@
   
               <div class="git-fork-line"></div>
               <div class="git-fork-line-close"></div>
+              <div class="git-fork-line-deploy"></div>
             </div>
           </section>
 
