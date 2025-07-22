@@ -35,11 +35,18 @@
       }
       .box {
         flex: 1;
-        text-align: center;
         background: #333;
         padding: 20px;
         border-radius: 10px;
         margin: 0 10px;
+        text-align: left;
+        
+        font-size: 0.8em;
+      }
+
+      .box h4 {
+        font-size: 1em;
+        text-align: center;
       }
     </style>
 
@@ -423,21 +430,21 @@
           <section>
             <div class="box-wrapper">
               <div class="box">
-                <h4>Working directory</h4>
-                <small>Actual files on your machine.</small>
-                <br /><br />
+                <h4>Working dir</h4>
+                <small><span class="hl">Actual files</span> on your machine.</small>
+                <hr>
                 <small><em>unversioned changes</em></small>
               </div>
               <div class="box">
                 <h4>Staging area</h4>
-                <small>Temporary area to build snapshots for commits.</small>
-                <br /><br />
+                <small><span class="hl">Temporary area</span> to build snapshots for commits.</small>
+                <hr>
                 <small><em>changes ready to commit</em></small>
               </div>
               <div class="box">
                 <h4>Git Repository</h4>
-                <small>Snapshots of files held in git as commits.</small>
-                <br /><br />
+                <small><span class="hl">Snapshots</span> of files held in git as commits.</small>
+                <hr>
                 <small><em>committed snapshots</em></small>
               </div>
             </div>
@@ -640,7 +647,7 @@
               <li>Multiple primary branches.</li>
               <li>Longer feature branches.</li>
               <li>Structured releases.</li>
-              <li>Easy versioning.</li>
+              <li>Stricter workflow.</li>
             </ul>
           </section>
           <section data-auto-animate>
@@ -649,7 +656,7 @@
               <li>Multiple primary branches.</li>
               <li>Longer feature branches.</li>
               <li>Structured releases.</li>
-              <li>Easy versioning.</li>
+              <li>Stricter workflow.</li>
             </ul>
             <div class="git-diagram">
               <div class="branch-label deploy-branch-label">deploy</div>
@@ -679,7 +686,39 @@
             </div>
           </section>
 
-          <!-- TODO add pro and cons -->
+           <section>
+            <div class="box-wrapper">
+              <div class="box">
+                <h4>Trunk</h4>
+                <ul><span class="hl">Pros</span>:
+                  <li>Fast development.</li>
+                  <li>Less complexity.</li>
+                  <li>More transparent.</li>
+                </ul>
+                <hr>
+                <ul><span class="error">Cons</span>:
+                  <li>Needs tests.</li>
+                  <li>Needs experieced devs.</li>
+                  <li>Little structure.</li>
+                </ul>
+              </div>
+              <div class="box">
+                <h4>Gitflow</h4>
+                <ul><span class="hl">Pros</span>:
+                  <li>Clear versions.</li>
+                  <li>Isolated development.</li>
+                  <li>Intern proof.</li>
+                </ul>
+                <hr>
+                <ul><span class="error">Cons</span>:
+                  <li>Slow.</li>
+                  <li>Hard CI/CD.</li>
+                  <li>Complex.</li>
+                </ul>
+              </div>
+            </div>
+            
+           </section>
         </section>
 
         <!-- The single purpose principle -->
