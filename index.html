@@ -133,26 +133,26 @@
         color: #d18a1d;
       }
 
-      .deploy-branch {
+      .gitflow-main-branch {
         top: -10px; 
         left: 320px;
       }
-      .deploy-branch .commit {
+      .gitflow-main-branch .commit {
         border: 3px solid #1dd18a;
       }
-      .deploy-branch .commit::after {
+      .gitflow-main-branch .commit::after {
         background: #1dd18a;
       }
-      .deploy-branch-label {
+      .gitflow-main-branch-label {
         top: -10px;
         color: #1dd18a;
       }
 
-      .git-diagram .branch.deploy-branch {
+      .git-diagram .branch.gitflow-main-branch {
         gap: 260px;
       }
 
-      .git-diagram .deploy-branch .commit::after {
+      .git-diagram .gitflow-main-branch .commit::after {
         width: 280px;
       }
 
@@ -180,7 +180,7 @@
         transform: rotate(-48deg);
       }
 
-      .git-fork-line-deploy {
+      .git-fork-line-gitflow {
         position: absolute;
         height: 3px;
         background: #1d64d1; 
@@ -659,11 +659,11 @@
               <li>Stricter workflow.</li>
             </ul>
             <div class="git-diagram">
-              <div class="branch-label deploy-branch-label">deploy</div>
-              <div class="branch-label main-branch-label">master</div>
-              <div class="branch-label feature-branch-label">development</div>
+              <div class="branch-label gitflow-main-branch-label">master</div>
+              <div class="branch-label main-branch-label">development</div>
+              <div class="branch-label feature-branch-label">feature/new-ui</div>
 
-              <div class="branch deploy-branch">
+              <div class="branch gitflow-main-branch">
                 <div class="commit">v1</div>
                 <div class="commit">v2</div>
               </div>
@@ -682,7 +682,7 @@
   
               <div class="git-fork-line"></div>
               <div class="git-fork-line-close"></div>
-              <div class="git-fork-line-deploy"></div>
+              <div class="git-fork-line-gitflow"></div>
             </div>
           </section>
 
