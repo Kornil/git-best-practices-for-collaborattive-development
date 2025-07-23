@@ -549,54 +549,46 @@
         <section>
           <section><h2>Branching strategies</h2></section>
           <section>
-            <p>There are <span class="hl">two main strategies</span> when working with git, each one has advantages and disadvantages.</p>
+            <p>There are <span class="hl">a few strategies</span> when working with git, each with its own advantages and disadvantages.</p>
           </section>
 
-          <!-- Thunk -->
+          <!-- TODO trunk -->
+
+          <!-- Github flow -->
           <section data-auto-animate>
-            <h3>Trunk based development</h3>
+            <h3>Github flow</h3>
           </section>
           <section data-auto-animate>
-            <h3>Trunk based development</h3>
+            <h3>Github flow</h3>
             <ul>
               <li>Single main branch.</li>
             </ul>
           </section>
           <section data-auto-animate>
-            <h3>Trunk based development</h3>
+            <h3>Github flow</h3>
             <ul>
               <li>Single main branch.</li>
               <li>Short-lived branches.</li>
             </ul>
           </section>
           <section data-auto-animate>
-            <h3>Trunk based development</h3>
+            <h3>Github flow</h3>
             <ul>
               <li>Single main branch.</li>
               <li>Short-lived branches.</li>
-              <li>Small, frequent commits.</li>
+              <li>CI/CD.</li>
             </ul>
           </section>
           <section data-auto-animate>
-            <h3>Trunk based development</h3>
+            <h3>Github flow</h3>
             <ul>
               <li>Single main branch.</li>
               <li>Short-lived branches.</li>
-              <li>Small, frequent commits.</li>
-              <li>Feature flags.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3>Trunk based development</h3>
-            <ul>
-              <li>Single main branch.</li>
-              <li>Short-lived branches.</li>
-              <li>Small, frequent commits.</li>
-              <li>Feature flags.</li>
+              <li>CI/CD.</li>
             </ul>
             <div class="git-diagram">
-              <div class="branch-label main-branch-label">trunk</div>
-              <div class="branch-label feature-branch-label">feature/new-ui</div>
+              <div class="branch-label main-branch-label">master</div>
+              <div class="branch-label feature-branch-label">feature branches</div>
   
               <div class="branch main-branch">
                 <div class="commit">m1</div>
@@ -630,14 +622,14 @@
             <h3>Gitflow</h3>
             <ul>
               <li>Multiple primary branches.</li>
-              <li>Longer feature branches.</li>
+              <li>Strict rules.</li>
             </ul>
           </section>
           <section data-auto-animate>
             <h3>Gitflow</h3>
             <ul>
               <li>Multiple primary branches.</li>
-              <li>Longer feature branches.</li>
+              <li>Strict rules.</li>
               <li>Structured releases.</li>
             </ul>
           </section>
@@ -645,23 +637,13 @@
             <h3>Gitflow</h3>
             <ul>
               <li>Multiple primary branches.</li>
-              <li>Longer feature branches.</li>
+              <li>Strict rules.</li>
               <li>Structured releases.</li>
-              <li>Stricter workflow.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <h3>Gitflow</h3>
-            <ul>
-              <li>Multiple primary branches.</li>
-              <li>Longer feature branches.</li>
-              <li>Structured releases.</li>
-              <li>Stricter workflow.</li>
             </ul>
             <div class="git-diagram">
               <div class="branch-label gitflow-main-branch-label">master</div>
               <div class="branch-label main-branch-label">development</div>
-              <div class="branch-label feature-branch-label">feature/new-ui</div>
+              <div class="branch-label feature-branch-label">feature branches</div>
 
               <div class="branch gitflow-main-branch">
                 <div class="commit">v1</div>
@@ -690,7 +672,7 @@
            <section>
             <div class="box-wrapper">
               <div class="box">
-                <h4>Trunk</h4>
+                <h4>Github flow</h4>
                 <ul><span class="hl">Pros</span>:
                   <li>Fast development.</li>
                   <li>Less complexity.</li>
@@ -699,7 +681,7 @@
                 <hr>
                 <ul><span class="error">Cons</span>:
                   <li>Needs tests.</li>
-                  <li>Needs experieced devs.</li>
+                  <li>Bad at versioning.</li>
                   <li>Little structure.</li>
                 </ul>
               </div>
