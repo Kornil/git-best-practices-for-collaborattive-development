@@ -36,7 +36,7 @@
       .box {
         flex: 1;
         background: #333;
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
         border-radius: 10px;
         margin: 0 10px;
         text-align: left;
@@ -47,6 +47,18 @@
       .box h4 {
         font-size: 1em;
         text-align: center;
+      }
+
+      .box-wrapper .commands {
+        display: flex;
+        position: absolute;
+        gap: 120px;
+        bottom: 10px;
+      }
+
+      .box-wrapper .commands small {
+        width: 200px;
+        font-style: italic;
       }
     </style>
 
@@ -447,6 +459,15 @@
                 <hr>
                 <small><em>committed snapshots</em></small>
               </div>
+
+                <div class="commands">
+                  <small>
+                    git add →
+                  </small>
+                  <small>
+                    git commit →
+                  </small>
+                </div>
             </div>
           </section>
         </section>
