@@ -1001,7 +1001,117 @@
 
         <!-- Interlude #3 merge vs rebase -->
           <section>
-            <section><h2>Interlude #3: merge vs rebase</h2></section>
+          <section>
+            <h2>Interlude #3: merge vs rebase</h2>
+          </section>
+
+          <section data-auto-animate>
+            <p>The main branch moves on while you work on a feature. Integrating these changes is vital to keep our work updated.</p>
+
+            <div class="git-diagram" style="height: 150px; margin-top: 20px">
+              <div class="branch-label main-branch-label">main</div>
+              <div class="branch-label feature-branch-label">feature</div>
+
+              <div class="branch main-branch">
+                <div class="commit">m1</div>
+                <div class="commit">m2</div>
+                <div class="commit" style="border-color: #f9e2af">m3</div>
+              </div>
+
+              <div class="branch feature-branch" style="left: 450px">
+                <div class="commit">c1</div>
+              </div>
+
+              <div class="git-fork-line" style="left: 420px; top: 70px"></div>
+            </div>
+          </section>
+
+          <section>
+            <p>Your choice depends on your goal for the project's history.</p>
+            <div class="box-wrapper">
+              <div class="box">
+                <h4>git merge</h4>
+                <p>Preserves historical context.</p>
+                <hr />
+                <p>
+                  <span class="hl">Keeps a record</span> of when a branch was merged.
+                  <br><br>
+                  <em>Best for maintaining an audit trail.</em>
+                </p>
+              </div>
+              <div class="box">
+                <h4>git rebase</h4>
+                <p>Maintains a linear history.</p>
+                <hr />
+                <p>
+                  <span class="hl">Creates a cleaner history</span>, easier to read and navigate.
+                  <br><br>
+                  <em>Best for local cleanup before sharing.</em>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <p>The resulting history is fundamentally different.</p>
+            <div class="box-wrapper">
+              <div class="box">
+                <h4>Merge History</h4>
+                <!-- Merge Diagram -->
+                <div
+                  class="git-diagram"
+                  style="height: 120px"
+                >
+                  <div class="branch main-branch" style="left: 0; top: 0">
+                    <div class="commit">m1</div>
+                    <div class="commit">m2</div>
+                    <div class="commit" style="border-color: #f9e2af">m3</div>
+                    <div class="commit" style="border-color: #1dd18a">M</div>
+                  </div>
+                  <div
+                    class="branch feature-branch"
+                    style="left: 172px; top: 60px"
+                  >
+                    <div class="commit">c1</div>
+                  </div>
+                  <div
+                    class="git-fork-line"
+                    style="
+                      left: 92px;
+                      top: 20px;
+                      width: 100px;
+                      transform: rotate(34deg);
+                    "
+                  ></div>
+                  <div
+                    class="git-fork-line"
+                    style="
+                      left: 192px;
+                      top: 90px;
+                      width: 110px;
+                      transform: rotate(-34deg);
+                      background: #d18a1d;
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div class="box" style="justify-content: center">
+                <h4>Rebase History</h4>
+                <!-- Rebase Diagram -->
+                <div
+                  class="git-diagram"
+                  style="height: 120px"
+                >
+                  <div class="branch main-branch" style="left: 0; top: 0">
+                    <div class="commit">m1</div>
+                    <div class="commit">m2</div>
+                    <div class="commit" style="border-color: #f9e2af">m3</div>
+                    <div class="commit" style="border-color: #d18a1d">c1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
           </section>
 
         <!-- Normal workflow -->
