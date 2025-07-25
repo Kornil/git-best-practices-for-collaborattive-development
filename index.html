@@ -371,11 +371,25 @@
             <p>Updating them does not impact your working branches.</p>
 
             <pre><code data-trim class="language-bash">
-              $ git fetch
+              $ git fetch -p
 
               # origin/master is updated
               # master is untouched
             </code></pre>
+            <p>The extra <span class="hl">-p</span> will also prune our local references, removing deleted remote branches.</p>
+          </section>
+          <section>
+            <p>We can also update our local references with <span class="hl">git pull</span>.</p>
+            <p>This will also update our local branch with the latest commits from the remote.</p>
+
+            <pre><code data-trim class="language-bash">
+              $ git pull -p
+
+              # origin/master is updated
+              # master is also updated
+            </code></pre>
+            <p>git pull can also be pointed at a different branch.</p>
+            <p><u><code>git pull origin master</code></u> is a useful way to update a <span class="hl">feature branch</span> with the latest code from <span class="hl">master</span>.</p>
           </section>
         </section>
 
