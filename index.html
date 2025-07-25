@@ -228,43 +228,7 @@
             <span class="hl">tracking</span> different versions in history of
             computer files.
           </section>
-          <section data-auto-animate>
-            <p>
-              <span class="hl">Version control systems</span> offer many
-              benefits to any project:
-            </p>
-          </section>
-          <section data-auto-animate>
-            <p>
-              <span class="hl">Version control systems</span> offer many
-              benefits to any project:
-            </p>
-            <ul>
-              <li>Record the history of a project.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <p>
-              <span class="hl">Version control systems</span> offer many
-              benefits to any project:
-            </p>
-            <ul>
-              <li>Record the history of a project.</li>
-              <li>Collaborate asynchronously.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <p>
-              <span class="hl">Version control systems</span> offer many
-              benefits to any project:
-            </p>
-            <ul>
-              <li>Record the history of a project.</li>
-              <li>Collaborate asynchronously.</li>
-              <li>Track changes.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
+          <section>
             <p>
               <span class="hl">Version control systems</span> offer many
               benefits to any project:
@@ -277,45 +241,7 @@
             </ul>
           </section>
 
-          <section data-auto-animate>
-            <p>
-              Git is an <span class="hl">open source</span> and
-              <span class="hl">distributed</span> version control system created
-              by Linus Torvalds in 2005.
-            </p>
-          </section>
-          <section data-auto-animate>
-            <p>
-              Git is an <span class="hl">open source</span> and
-              <span class="hl">distributed</span> version control system created
-              by Linus Torvalds in 2005.
-            </p>
-            <p>Git's core design principles:</p>
-          </section>
-          <section data-auto-animate>
-            <p>
-              Git is an <span class="hl">open source</span> and
-              <span class="hl">distributed</span> version control system created
-              by Linus Torvalds in 2005.
-            </p>
-            <p>Git's core design principles:</p>
-            <ul>
-              <li>Decentralized.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <p>
-              Git is an <span class="hl">open source</span> and
-              <span class="hl">distributed</span> version control system created
-              by Linus Torvalds in 2005.
-            </p>
-            <p>Git's core design principles:</p>
-            <ul>
-              <li>Decentralized.</li>
-              <li>Data integrity.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
+          <section>
             <p>
               Git is an <span class="hl">open source</span> and
               <span class="hl">distributed</span> version control system created
@@ -326,20 +252,7 @@
               <li>Decentralized.</li>
               <li>Data integrity.</li>
               <li>Offline first.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <p>
-              Git is an <span class="hl">open source</span> and
-              <span class="hl">distributed</span> version control system created
-              by Linus Torvalds in 2005.
-            </p>
-            <p>Git's core design principles:</p>
-            <ul>
-              <li>Decentralized.</li>
-              <li>Data integrity.</li>
-              <li>Offline first.</li>
-              <li>Speed.</li>
+              <li>Fast.</li>
             </ul>
           </section>
         </section>
@@ -403,44 +316,10 @@
               <span class="hl">immutable</span>.
             </p>
           </section>
-          <section data-auto-animate>
-            <p>Commits record 5 essential information:</p>
-          </section>
-          <section data-auto-animate>
-            <p>Commits record 5 essential information:</p>
-            <p></p>
-            <ul>
-              <li>Commit hash.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
+          <section>
             <p>Commits record 5 essential information:</p>
             <ul>
-              <li>Commit hash.</li>
-              <li>Parent commit hash.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <p>Commits record 5 essential information:</p>
-            <ul>
-              <li>Commit hash.</li>
-              <li>Parent commit hash.</li>
-              <li>Message title and body.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <p>Commits record 5 essential information:</p>
-            <ul>
-              <li>Commit hash.</li>
-              <li>Parent commit hash.</li>
-              <li>Message title and body.</li>
-              <li>Author name and email.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <p>Commits record 5 essential information:</p>
-            <ul>
-              <li>Commit hash.</li>
+              <li>Commit SHA-1 hash.</li>
               <li>Parent commit hash.</li>
               <li>Message title and body.</li>
               <li>Author name and email.</li>
@@ -503,6 +382,7 @@
               It creates an
               <span class="hl">independent line of development</span>.
             </p>
+            <p>By nature, branches are very cheap to create</p>
             <div class="git-diagram">
               <div class="branch-label main-branch-label">master</div>
               <div class="branch-label feature-branch-label">
@@ -524,6 +404,16 @@
 
               <div class="git-fork-line"></div>
             </div>
+          </section>
+          <section>
+            <p>Establishing a <span class="hl">consistent naming convention</span> for branches is a good practice for collaborative development. It directly improves:</p>
+            <ul>
+              <li>Clarity of intent.</li>
+              <li>Traceability.</li>
+              <li>Organization.</li>
+              <li>Scalability.</li>
+              <li>Efficiency.</li>
+            </ul>
           </section>
         </section>
 
@@ -562,6 +452,22 @@
               any commit.
             </p>
           </section>
+
+          <section data-auto-animate>
+            <p>
+              HEAD is a special pointer indicating the
+              <span class="hl">current commit</span> where you are.
+            </p>
+            <p>
+              By default, HEAD always points at the
+              <span class="hl">latest commit</span> of the current branch.
+            </p>
+            <p>
+              It can be manually <span class="hl">detached</span> to point at
+              any commit.
+            </p>
+            <p><u>Never commit in a detached head.</u></p><p><em>You will lose your work.</em></p>
+          </section>
         </section>
 
         <!-- Interlude #2: Stash -->
@@ -580,13 +486,16 @@
             </p>
             <pre><code data-trim class="language-bash">
               # Store uncommitted changes
-              $ git stash save "new route wip"
+              $ git stash push -m "new route wip"
 
               $ git stash list
               > stash@{0}: On master: new route wip
 
-              # Retrieve previously stored changes
+              # Retrieve previously stored changes and delete the stash
               $ git stash pop stash@{0}
+
+              # Retrieve previously stored changes and keep the stash
+              $ git stash apply stash@{0}
             </code></pre>
           </section>
         </section>
@@ -864,10 +773,10 @@
           </section>
         </section>
 
-        <!--  History is sacred -->
+        <!--  Shared vs. Local History -->
         <section>
           <section>
-            <h2>History is sacred</h2>
+            <h2>Shared vs. Local History</h2>
           </section>
           <section>
             <q
@@ -884,13 +793,13 @@
 
           <section data-auto-animate>
             <p>
-              The key distinction is <span class="hl">Local</span> vs.
+              The key distinctions between <span class="hl">Local</span> vs.
               <span class="hl">Shared</span> history:
             </p>
           </section>
           <section data-auto-animate>
             <p>
-              The key distinction is <span class="hl">Local</span> vs.
+              The key distinctions between <span class="hl">Local</span> vs.
               <span class="hl">Shared</span> history:
             </p>
             <ul>
@@ -902,7 +811,7 @@
           </section>
           <section data-auto-animate>
             <p>
-              The key distinction is <span class="hl">Local</span> vs.
+              The key distinctions between <span class="hl">Local</span> vs.
               <span class="hl">Shared</span> history:
             </p>
             <ul>
@@ -923,23 +832,7 @@
             </p>
           </section>
 
-          <section data-auto-animate>
-            <p>The consequences of not preserving history:</p>
-          </section>
-          <section data-auto-animate>
-            <p>The consequences of not preserving history:</p>
-            <ul>
-              <li>Breaks team collaboration.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
-            <p>The consequences of not preserving history:</p>
-            <ul>
-              <li>Breaks team collaboration.</li>
-              <li>Loss of auditability.</li>
-            </ul>
-          </section>
-          <section data-auto-animate>
+          <section>
             <p>The consequences of not preserving history:</p>
             <ul>
               <li>Breaks team collaboration.</li>
@@ -1021,7 +914,7 @@
               pick 1234 Add readme.md
               pick 2345 Fix typo
               pick 3456 Fix another typo
-              pick 4567 adsaks
+              pick 4567 work in progress
               pick 5678 Add deploy script
               pick 6789 Add second deploy script
             </code></pre>
@@ -1032,13 +925,13 @@
               <li><span class="hl">pick</span> will keep a commit as is.</li>
               <li>
                 <span class="hl">fixup</span> will merge a commit to the
-                previous one.
+                previous one, discarding its commit message.
               </li>
               <li><span class="hl">drop</span> will delete a commit.</li>
               <li><span class="hl">reword</span> will rename a commit.</li>
               <li>
                 <span class="hl">squash</span> will merge a commit to the
-                previous one and rename it.
+                previous one and combine the messages.
               </li>
             </ul>
             <pre><code data-trim class="language-bash">
@@ -1046,17 +939,17 @@
               pick 1234 Add readme.md
               fixup 2345 Fix typo
               drop 3456 Fix another typo
-              reword 4567 WIP
+              reword 4567 work in progress
               pick 5678 Add deploy script
               squash 6789 Add second deploy script
             </code></pre>
           </section>
         </section>
 
-        <!-- Interlude #3 merge vs rebase -->
+        <!-- merge vs rebase -->
         <section>
           <section>
-            <h2>Interlude #3: merge vs rebase</h2>
+            <h2>merge vs rebase</h2>
           </section>
 
           <section data-auto-animate>
@@ -1167,6 +1060,11 @@
             </div>
           </section>
         </section>
+
+        <!-- Pull requests -->
+         <section>
+          <section><h2>Pull request</h2></section>
+         </section>
 
         <!-- Ideal workflow -->
          <section>
