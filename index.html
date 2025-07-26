@@ -289,7 +289,7 @@
               # origin/master is updated
               # master is untouched
             </code></pre>
-            <p>The extra <span class="hl">-p</span> will also prune our local references, removing deleted remote branches.</p>
+            <p>The extra <span class="hl">-p</span> will also prune stale remote-tracking branches.</p>
           </section>
           <section>
             <p>We can also update our local references with <span class="hl">git pull</span>.</p>
@@ -311,13 +311,13 @@
           <section><h2>Commits</h2></section>
           <section>
             <p>
-              The commit is the fundamental unit in git, is is
+              The commit is Git's fundamental unit, is is
               <span class="hl">unique</span> and
               <span class="hl">immutable</span>.
             </p>
           </section>
           <section>
-            <p>Commits record 5 essential information:</p>
+            <p>Commits record 5 essential details:</p>
             <ul>
               <li>Commit SHA-1 hash.</li>
               <li>Parent commit hash.</li>
@@ -466,7 +466,8 @@
               It can be manually <span class="hl">detached</span> to point at
               any commit.
             </p>
-            <p><u>Never commit in a detached head.</u></p><p><em>You will lose your work.</em></p>
+            <p><u>Never commit in a detached head.</u></p>
+            <p><em>You will lose your work.</em></p>
           </section>
         </section>
 
@@ -617,7 +618,7 @@
                 <ul>
                   <span class="error">Cons</span
                   >:
-                  <li>Needs tests.</li>
+                  <li>Reliance on tests.</li>
                   <li>Minimal release versioning.</li>
                   <li>Simpler structure.</li>
                 </ul>
@@ -636,8 +637,8 @@
                   <span class="error">Cons</span
                   >:
                   <li>Slow.</li>
-                  <li>Hard CI/CD.</li>
-                  <li>Complex.</li>
+                  <li>Complex CI/CD.</li>
+                  <li>Complex in general.</li>
                 </ul>
               </div>
             </div>
@@ -677,7 +678,7 @@
             <pre><code data-trim class="language-bash">
               $ git commit -m "Add createDashboard button"
 
-              $ git commit -m "Fix #123" -m "f is pure, avoids side effects"
+              $ git commit -m "Fix #123" -m "Additional details here"
             </code></pre>
           </section>
           <section data-auto-animate>
@@ -692,7 +693,7 @@
             <pre><code data-trim class="language-bash">
               $ git commit -m "Add createDashboard button"
 
-              $ git commit -m "Fix #123" -m "f is pure, avoids side effects"
+              $ git commit -m "Fix #123" -m "Additional details here"
             </code></pre>
             <br />
             <small
@@ -715,7 +716,7 @@
               <span class="hl">bugfix</span>.
             </p>
             <pre><code data-trim class="language-bash">
-              $ git checkout -b "feature/grid-drag&drop"
+              $ git checkout -b "feature/grid-drag-drop"
 
               $ git checkout -b "refactor/grid-module-typescript"
 
@@ -788,7 +789,7 @@
               more.
             </q>
             <br />
-            <p>— Linus Torvalds</p>
+            <p style="text-align: right;">— Linus Torvalds</p>
           </section>
 
           <section data-auto-animate>
@@ -821,7 +822,7 @@
               </li>
               <li>
                 You <span class="error">should not</span> modify history that
-                has been already published, even if it's your own branch.
+                has already been published, even if it's your own branch.
               </li>
             </ul>
           </section>
